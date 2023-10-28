@@ -1,3 +1,4 @@
+//Add task button appears upon keydown event
 $("#inputTask").keydown(function(){
     if ($("#inputTask").val().length >= 2) {
             $("#addTaskBtn").removeClass("hidden");
@@ -20,4 +21,13 @@ $("#addTaskBtn").click(function(){
 
 });
 
+//Delete Function
+$("ul").on("click", "button:contains(Delete)", function() {
+    $(this).parent().remove();
+});
 
+
+//Radio Buttons
+$("ul").on("click", "input:radio", function() {
+    $(this).parent().addClass("line-through	");
+});
